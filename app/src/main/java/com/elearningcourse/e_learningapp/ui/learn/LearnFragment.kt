@@ -4,11 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.elearningcourse.e_learningapp.R
 import com.elearningcourse.e_learningapp.databinding.FragmentLearnBinding
+import com.google.android.material.button.MaterialButton
 
 class LearnFragment : Fragment() {
 
@@ -24,19 +25,27 @@ class LearnFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        learnViewModel =
-            ViewModelProvider(this).get(LearnViewModel::class.java)
-
         _binding = FragmentLearnBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        learnViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupViewModel()
+        setClickListeners()
+    }
+
+    private fun setupViewModel() {
+        learnViewModel =
+            ViewModelProvider(this).get(LearnViewModel::class.java)
+    }
+
+    private fun setClickListeners() {
+        val startButton: MaterialButton = binding.startLearnBtn
+        startButton.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_learn_to_unit_selection_fragment)
+        }
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -6,5 +6,17 @@
     <string name="title_learning_material">Learn</string>
     <string name="title_test_material">Test</string>
     <string name="title_stats">Statistics</string>
+    <string name="welcome_title">Welcome to E - Learning Course</string>
+    <string name="begin_button_hint">Begin!</string>
+
+    <!-- units -->
+    <string name="unit_selection_hint_text">Select a Unit to begin learning!</string>
+    <string name="unit_1_text">Unit 1</string>
+    <string name="unit_2_text">Unit 2</string>
+    <string name="unit_3_text">Unit 3</string>
+    <string name="unit_selection">Unit Selection</string>
+    <string name="first_unit">Unit 1</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def core_version = "1.8.0"
     def app_compat_version = "1.4.2"
     def navigation_version = "2.5.1"
@@ -44,6 +45,7 @@ dependencies {
     def constraint_layout_version = "2.1.4"
     def view_model_version = "2.5.1"
     def room_version = "2.4.3"
+    def view_pager_2_version = "1.0.0"
 
     // Android Core
     implementation "androidx.core:core-ktx:$core_version"
@@ -70,6 +72,9 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
     // To use Kotlin annotation processing tool (kapt)
     kapt "androidx.room:room-compiler:$room_version"
+
+    // View Pager 2
+    implementation "androidx.viewpager2:viewpager2:$view_pager_2_version"
 
     // JUnit and Espresso
     testImplementation 'junit:junit:4.+'
