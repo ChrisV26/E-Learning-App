@@ -40,6 +40,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def core_version = "1.8.0"
     def app_compat_version = "1.4.2"
+    def fragment_version = "1.5.2"
     def navigation_version = "2.5.1"
     def material_version = "1.6.1"
     def constraint_layout_version = "2.1.4"
@@ -52,6 +53,9 @@ dependencies {
 
     // Android App Compat
     implementation "androidx.appcompat:appcompat:$app_compat_version"
+
+    // Fragment
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
 
     // Navigation
     implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
