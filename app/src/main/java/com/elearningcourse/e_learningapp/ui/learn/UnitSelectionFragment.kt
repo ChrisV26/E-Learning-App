@@ -10,7 +10,7 @@ import com.elearningcourse.e_learningapp.R
 import com.elearningcourse.e_learningapp.databinding.FragmentUnitSelectionBinding
 import com.google.android.material.button.MaterialButton
 
-class UnitSelection : Fragment() {
+class UnitSelectionFragment : Fragment() {
     private var _unitSelectionBinding: FragmentUnitSelectionBinding? = null
     private val unitSelectionBinding get() = _unitSelectionBinding!!
 

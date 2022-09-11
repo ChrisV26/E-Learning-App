@@ -41,7 +41,7 @@
 
     <fragment
         android:id="@+id/navigation_select_unit"
-        android:name="com.elearningcourse.e_learningapp.ui.learn.units.UnitSelection"
+        android:name="com.elearningcourse.e_learningapp.ui.learn.UnitSelectionFragment"
         android:label="@string/unit_selection">
 
         <action
