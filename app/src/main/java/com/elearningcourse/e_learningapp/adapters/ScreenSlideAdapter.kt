@@ -4,9 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.elearningcourse.e_learningapp.ui.learn.units.firstUnit.FirstUnitMaterial
 
-class ScreenSlideFirstUnitAdapter(
+class ScreenSlideAdapter(
     fragmentManager: FragmentManager,
     lifecycle: Lifecycle
 ) : FragmentStateAdapter(fragmentManager, lifecycle) {
@@ -15,5 +14,9 @@ class ScreenSlideFirstUnitAdapter(
         return 5
     }
 
-    override fun createFragment(position: Int): Fragment = FirstUnitMaterial()
+    override fun createFragment(position: Int): Fragment {
+        TODO("Not yet implemented")
+    }
+
+
 }

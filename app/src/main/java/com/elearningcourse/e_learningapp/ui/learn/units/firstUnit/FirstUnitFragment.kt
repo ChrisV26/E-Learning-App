@@ -6,17 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.viewpager2.widget.ViewPager2
-import com.elearningcourse.e_learningapp.adapters.ScreenSlideFirstUnitAdapter
 import com.elearningcourse.e_learningapp.databinding.FirstUnitFragmentBinding
 
-class FirstUnit : Fragment() {
+class FirstUnitFragment : Fragment() {
 
     private var _firstUnitBinding: FirstUnitFragmentBinding? = null
     private val firstUnitBinding get() = _firstUnitBinding!!
 
     private lateinit var viewModel: FirstUnitViewModel
-    private lateinit var viewPager: ViewPager2
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,21 +27,19 @@ class FirstUnit : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
-        setupViewPager()
+        showFirstUnitMaterial()
     }
+
 
     private fun setupViewModel() {
         viewModel = ViewModelProvider(this).get(FirstUnitViewModel::class.java)
     }
 
-    private fun setupViewPager() {
-        viewPager = firstUnitBinding.viewPager
-        val viewPagerAdapter = ScreenSlideFirstUnitAdapter(
-            childFragmentManager,
-            lifecycle
-        )
-
-        viewPager.adapter= viewPagerAdapter
+    private fun showFirstUnitMaterial() {
+        val firstUnitMaterialText =
+            viewModel.readFirstUnitMaterial(requireContext(), "intro_to_astronomy.txt")
+        firstUnitBinding.firstUnitMaterialTextView.text = firstUnitMaterialText
     }
+
 
 }

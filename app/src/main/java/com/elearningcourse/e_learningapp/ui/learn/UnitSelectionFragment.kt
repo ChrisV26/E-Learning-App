@@ -1,4 +1,4 @@
-package com.elearningcourse.e_learningapp.ui.learn.units
+package com.elearningcourse.e_learningapp.ui.learn
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -29,12 +29,23 @@ class UnitSelection : Fragment() {
     }
 
     private fun setClickListeners() {
+
         val firstUnitButton: MaterialButton = unitSelectionBinding.unit1Button
         firstUnitButton.setOnClickListener {
             findNavController().navigate(R.id.action_fragment_unit_selection_to_first_unit_fragment)
         }
-    }
 
+        val secondUnitButton: MaterialButton = unitSelectionBinding.unit2Button
+        secondUnitButton.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_unit_selection_to_second_unit_fragment)
+        }
+
+        val thirdUnitButton: MaterialButton = unitSelectionBinding.unit3Button
+        thirdUnitButton.setOnClickListener {
+            findNavController().navigate(R.id.action_fragment_unit_selection_to_third_unit_fragment)
+        }
+
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

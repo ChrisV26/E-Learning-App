@@ -54,12 +54,46 @@
 
         </action>
 
+        <action
+            android:id="@+id/action_fragment_unit_selection_to_second_unit_fragment"
+            app:destination="@id/second_unit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
+        <action
+            android:id="@+id/action_fragment_unit_selection_to_third_unit_fragment"
+            app:destination="@id/third_unit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
     </fragment>
 
     <fragment
         android:id="@+id/first_unit"
-        android:name="com.elearningcourse.e_learningapp.ui.learn.units.firstUnit.FirstUnit"
+        android:name="com.elearningcourse.e_learningapp.ui.learn.units.firstUnit.FirstUnitFragment"
         android:label="@string/first_unit">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_unit"
+        android:name="com.elearningcourse.e_learningapp.ui.learn.units.secondUnit.SecondUnitFragment"
+        android:label="@string/second_unit">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_unit"
+        android:name="com.elearningcourse.e_learningapp.ui.learn.units.thirdUnit.ThirdUnitFragment"
+        android:label="@string/third_unit">
 
     </fragment>
 
