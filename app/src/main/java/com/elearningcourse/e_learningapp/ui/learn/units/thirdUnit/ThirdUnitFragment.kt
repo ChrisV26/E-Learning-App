@@ -40,17 +40,6 @@ class ThirdUnitFragment : Fragment() {
 
         val viewPagerAdapter = ScreenSlideAdapter()
 
-        val planetImagesAsResIds = arrayOf(
-            R.drawable.earth,
-            R.drawable.jupiter,
-            R.drawable.mars,
-            R.drawable.mercury,
-            R.drawable.neptune,
-            R.drawable.saturn,
-            R.drawable.uranus,
-            R.drawable.venus
-        )
-
         viewModel.planetListLiveData.observe(requireActivity(), {
             it?.let {
                 viewPagerAdapter.submitList(it as MutableList<Planet>)
