@@ -15,7 +15,6 @@ class FirstUnitFragment : Fragment() {
 
     private lateinit var viewModel: FirstUnitViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +28,6 @@ class FirstUnitFragment : Fragment() {
         setupViewModel()
         showFirstUnitMaterial()
     }
-
 
     private fun setupViewModel() {
         viewModel = ViewModelProvider(this).get(FirstUnitViewModel::class.java)

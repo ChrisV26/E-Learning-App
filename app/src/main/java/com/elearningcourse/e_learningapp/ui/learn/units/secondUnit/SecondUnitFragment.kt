@@ -9,8 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.elearningcourse.e_learningapp.databinding.SecondUnitFragmentBinding
 
 class SecondUnitFragment : Fragment() {
+
     private var _secondUnitFragmentBinding: SecondUnitFragmentBinding? = null
     private val secondUnitFragmentBinding get() = _secondUnitFragmentBinding!!
+
     private lateinit var viewModel: SecondUnitViewModel
 
     override fun onCreateView(
@@ -32,7 +34,7 @@ class SecondUnitFragment : Fragment() {
     }
 
     private fun showSecondUnitMaterial() {
-        var secondUnitMaterialText =
+        val secondUnitMaterialText =
             viewModel.readFromSecondMaterial(requireContext(), "intro_to_solar_system.txt")
 
         secondUnitFragmentBinding.secondUnitMaterialTextView.text = secondUnitMaterialText
