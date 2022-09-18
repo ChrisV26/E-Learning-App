@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        val navView: BottomNavigationView = binding.bottomNavView
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment  // val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -46,12 +46,17 @@ class MainActivity : AppCompatActivity() {
         hideBottomNav(navController)
     }
 
+    /**
+     * Hide Bottom Navigation Menu in specific screens
+     * */
     private fun hideBottomNav(navController: NavController) {
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.first_unit || destination.id == R.id.second_unit || destination.id == R.id.third_unit)
-                binding.navView.visibility = View.GONE
+            if (destination.id == R.id.first_unit || destination.id == R.id.second_unit || destination.id == R.id.third_unit
+                || destination.id == R.id.first_unit_test || destination.id == R.id.second_unit_test || destination.id == R.id.third_unit_test || destination.id == R.id.revision_test
+            )
+                binding.bottomNavView.visibility = View.GONE
             else {
-                binding.navView.visibility = View.VISIBLE
+                binding.bottomNavView.visibility = View.VISIBLE
             }
         }
     }

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.elearningcourse.e_learningapp.data.model.Planet
 import com.elearningcourse.e_learningapp.databinding.ThirdUnitMaterialItemBinding
 
-class ScreenSlideAdapter() :
+class ScreenSlideAdapter :
     ListAdapter<Planet, ScreenSlideAdapter.CustomViewHolder>(PlanetDiffCallBack) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {

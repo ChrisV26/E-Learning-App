@@ -29,6 +29,46 @@
         android:label="@string/title_test_material"
         tools:layout="@layout/fragment_test">
 
+        <action
+            android:id="@+id/action_fragment_test_selection_to_first_unit_test_fragment"
+            app:destination="@id/first_unit_test"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
+        <action
+            android:id="@+id/action_fragment_test_selection_to_second_unit_test_fragment"
+            app:destination="@id/second_unit_test"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
+        <action
+            android:id="@+id/action_fragment_test_selection_to_third_unit_test_fragment"
+            app:destination="@id/third_unit_test"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
+        <action
+            android:id="@+id/action_fragment_test_selection_to_revision_test_fragment"
+            app:destination="@id/revision_test"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim">
+
+        </action>
+
     </fragment>
 
     <fragment
@@ -96,5 +136,34 @@
         android:label="@string/third_unit">
 
     </fragment>
+
+    <fragment
+        android:id="@+id/first_unit_test"
+        android:name="com.elearningcourse.e_learningapp.ui.test.unitTests.UnitOneTestFragment"
+        android:label="@string/unit_1_test_text">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_unit_test"
+        android:name="com.elearningcourse.e_learningapp.ui.test.unitTests.UnitTwoTestFragment"
+        android:label="@string/unit_2_test_text">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_unit_test"
+        android:name="com.elearningcourse.e_learningapp.ui.test.unitTests.UnitThreeTestFragment"
+        android:label="@string/unit_3_test_text">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/revision_test"
+        android:name="com.elearningcourse.e_learningapp.ui.test.unitTests.RevisionTestFragment"
+        android:label="@string/revision_test_text">
+
+    </fragment>
+
 
 </navigation>
