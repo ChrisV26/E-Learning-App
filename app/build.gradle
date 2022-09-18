@@ -31,7 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         freeCompilerArgs += [
-                '-Xjvm-default=enable' // Inheritance from an interface with '@JvmDefault' members is only allowed with -Xjvm-default option
+                '-Xjvm-default=enable' // Inheritance from an interface with '@JvmDefault' members is only allowed with -Xjvm-default option - used when creating a ViewModelProvider Factory
         ]
     }
     buildFeatures {
