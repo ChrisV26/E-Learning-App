@@ -1,13 +1,8 @@
 package com.elearningcourse.e_learningapp.ui.test
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import java.lang.IllegalArgumentException
 
-class TestViewModel : ViewModel() {
+class TestViewModel() : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Test Fragment"
-    }
-    val text: LiveData<String> = _text
 }

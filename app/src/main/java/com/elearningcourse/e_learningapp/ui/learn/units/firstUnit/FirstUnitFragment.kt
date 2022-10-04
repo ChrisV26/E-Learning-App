@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.elearningcourse.e_learningapp.R
 import com.elearningcourse.e_learningapp.databinding.FirstUnitFragmentBinding
 
 class FirstUnitFragment : Fragment() {
@@ -27,7 +29,9 @@ class FirstUnitFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
         showFirstUnitMaterial()
+        setClickListeners()
     }
+
 
     private fun setupViewModel() {
         viewModel = ViewModelProvider(this).get(FirstUnitViewModel::class.java)
@@ -37,6 +41,13 @@ class FirstUnitFragment : Fragment() {
         val firstUnitMaterialText =
             viewModel.readFirstUnitMaterial(requireContext(), "intro_to_astronomy.txt")
         firstUnitBinding.firstUnitMaterialTextView.text = firstUnitMaterialText
+
+    }
+
+    private fun setClickListeners() {
+        firstUnitBinding.nextUnit.setOnClickListener {
+            findNavController().navigate(R.id.action_first_unit_to_second_unit)
+        }
     }
 
 

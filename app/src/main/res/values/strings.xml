@@ -91,5 +91,11 @@
     <string name="unit_2_test_text">Unit 2 - Test</string>
     <string name="unit_3_test_text">Unit 3 - Test</string>
     <string name="revision_test_text"> Revision - Test</string>
+    <string name="finish">Finish</string>
+    <string name="submit">Submit</string>
+    <string name="next_question">Next Question</string>
+    <string name="template_text">Which internet company began life as an online bookstore called \'Cadabra\'?</string>
+    <string name="solar_system_next_text">Ready to travel to the Solar System?</string>
+    <string name="planets_next_unit">Planets here we go!</string>
 
 </resources>

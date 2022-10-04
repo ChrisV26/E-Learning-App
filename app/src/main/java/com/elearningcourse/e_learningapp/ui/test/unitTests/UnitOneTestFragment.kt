@@ -4,7 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioButton
+import androidx.core.view.forEachIndexed
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import com.elearningcourse.e_learningapp.databinding.FragmentUnitOneTestBinding
 import com.elearningcourse.e_learningapp.ui.test.TestViewModel
 
@@ -12,8 +16,6 @@ class UnitOneTestFragment : Fragment() {
 
     private var _unitOneTestBinding: FragmentUnitOneTestBinding? = null
     private val unitOneTestBinding get() = _unitOneTestBinding!!
-
-    private lateinit var testViewModel: TestViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +28,9 @@ class UnitOneTestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //setupViewModel()
+
     }
 
-    private fun setupViewModel() {
-        TODO("Not yet implemented")
-    }
 
     override fun onDestroyView() {
         super.onDestroyView()

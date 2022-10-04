@@ -121,12 +121,28 @@
         android:name="com.elearningcourse.e_learningapp.ui.learn.units.firstUnit.FirstUnitFragment"
         android:label="@string/first_unit">
 
+        <action
+            android:id="@+id/action_first_unit_to_second_unit"
+            app:destination="@id/second_unit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+
     </fragment>
 
     <fragment
         android:id="@+id/second_unit"
         android:name="com.elearningcourse.e_learningapp.ui.learn.units.secondUnit.SecondUnitFragment"
         android:label="@string/second_unit">
+
+        <action
+            android:id="@+id/action_second_unit_to_third_unit"
+            app:destination="@id/third_unit"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
 
     </fragment>
 

@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.elearningcourse.e_learningapp.R
 import com.elearningcourse.e_learningapp.databinding.SecondUnitFragmentBinding
 
 class SecondUnitFragment : Fragment() {
@@ -27,6 +29,7 @@ class SecondUnitFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
         showSecondUnitMaterial()
+        setClickListeners()
     }
 
     private fun setupViewModel() {
@@ -38,6 +41,12 @@ class SecondUnitFragment : Fragment() {
             viewModel.readFromSecondMaterial(requireContext(), "intro_to_solar_system.txt")
 
         secondUnitFragmentBinding.secondUnitMaterialTextView.text = secondUnitMaterialText
+    }
+
+    private fun setClickListeners() {
+        secondUnitFragmentBinding.nextUnit.setOnClickListener {
+            findNavController().navigate(R.id.action_second_unit_to_third_unit)
+        }
     }
 
 }
